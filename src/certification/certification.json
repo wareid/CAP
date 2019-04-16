@@ -1,5 +1,4 @@
 {
   "tags": "certification",
-  "layout": "page.njk",
-  "rootref": ".."
+  "layout": "page.njk"
 }

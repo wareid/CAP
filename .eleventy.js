@@ -81,6 +81,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.setDataDeepMerge(true);
+
+
   return {
     templateFormats: [
       "md",
@@ -88,6 +90,7 @@ module.exports = function(eleventyConfig) {
       "html",
       "liquid"
     ],
+    pathPrefix: "/CAP/",
     passthroughFileCopy: true,
     dir: {
       input: "src",

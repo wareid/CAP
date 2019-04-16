@@ -1,1 +1,2 @@
-<a href="/blog/tags/{{tag}}" class="tag">{{ tag }}</a>
+{%set tagUrl %}/blog/tags/{{tag}}{% endset %}
+<a href="{{tagUrl | url}}" class="tag">{{ tag }}</a>

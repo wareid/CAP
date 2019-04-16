@@ -1,5 +1,4 @@
 {
   "tags": "resources",
-  "layout": "page.njk",
-  "rootref": ".."
+  "layout": "page.njk"
 }

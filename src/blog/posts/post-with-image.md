@@ -7,7 +7,7 @@ tags:
 ---
 This is a post with an image and a tag.
 
-![Two cats sleeping next to a laptop](/images/cats.jpg)
+![Two cats sleeping next to a laptop](/CAP/images/cats.jpg)
 
 Some extra text:
 

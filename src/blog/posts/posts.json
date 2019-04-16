@@ -1,5 +1,4 @@
 {
   "tags": "post",
-  "layout": "blog-post.njk",
-  "rootref": "../../.."
+  "layout": "blog-post.njk"
 }

@@ -1,7 +1,6 @@
 ---
 title: Home Page
 layout: page.njk
-rootref: '.'
 ---
 # Welcome
 
