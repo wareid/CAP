@@ -1,0 +1,91 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  font-size: large;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+a {
+  text-decoration: none;
+}
+
+/* header and footer */
+.sitenav li{
+  display: inline-block;
+  padding-right: 2rem;
+}
+.sitenav ul {
+  padding: 0;
+}
+
+.sitenav {
+  border-bottom: 2px solid black;
+}
+.footer {
+  font-size: smaller;
+  font-style: italic;
+  line-height: 1rem;
+}
+.footer:nth-of-type(1) {
+  margin-top: 12rem;
+  padding-top: 1rem;
+  border-top: 2px solid black;
+}
+
+/* asides */
+aside {
+  border: 2px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 4rem;
+	font-size: smaller;
+}
+
+aside ul{
+  list-style-type: circle;
+  padding-left: 0;
+}
+
+/* main content */
+.content {
+  padding-top: 1rem;
+}
+
+.mainflex {
+  display: flex;
+}
+.mainflex div:first-child {
+  width: 80%;
+}
+
+.post-snippet {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+.post-snippet img {
+  width: 80%;
+}
+/* little things */
+.blognav {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.tag {
+  font-size: smaller;
+}
+.tag:after {
+  content: ", ";
+}
+.tag:last-child:after {
+  content: "";
+}

@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - blog
+    - certification
+    - resources
+    - tagList
+  addAllPagesToCollections: true
+layout: 'page.njk'
+renderData:
+  title: Posts tagged “{{tag}}”
+permalink: /blog/tags/{{tag}}/
+---
+<h1>Tagged "{{tag}}"</h1>
+
+{%- set postlist = collections[ tag ] -%}
+{%- include "components/blog-post-list-expanded.njk" -%}
