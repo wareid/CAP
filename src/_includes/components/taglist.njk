@@ -1,5 +1,5 @@
 <ul>
   {%- for tag in taglist -%}
-    <li><a href="tags/{{tag}}">{{ tag }}</a></li>
+    <li>{%include 'components/tag.njk'%}</li>
   {%- endfor -%}
 </ul>

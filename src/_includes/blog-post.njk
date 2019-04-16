@@ -10,7 +10,7 @@
 <p>
   <span style="font-size: smaller; margin-right: 3px;">Tags:</span>
   {%- for tag in tags -%}
-  <a href="/blog/tags/{{tag}}" class="tag">{{ tag }}</a>
+  {% include 'components/tag.njk'%}
   {%- endfor -%}
 </p>
 {%- endif -%}
