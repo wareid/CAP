@@ -88,14 +88,10 @@ module.exports = function(eleventyConfig) {
       "html",
       "liquid"
     ],
-    pathPrefix: "/",
     passthroughFileCopy: true,
-    markdownTemplateEngine: "liquid",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
     dir: {
       input: "src",
-      output: "_site"
+      output: "docs"
     }
   };
 };
