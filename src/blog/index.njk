@@ -1,0 +1,23 @@
+---
+layout: 'page.njk'
+title: Blog
+---
+<div class="mainflex">
+  <div>
+    {% set postlist = collections.post | reverse %}
+    {% include 'components/blog-post-list-expanded.njk' %}
+  </div>
+
+  <div class="sidebar">
+    <aside>
+      <h2>Recent Posts</h2>
+      {% set postlist = collections.post | reverse | head(3) %}
+      {% include 'components/blog-post-list.njk' %}
+    </aside>
+    <aside>
+      <h2>Tags</h2>
+      {%-set taglist=collections.tagList | filterTags -%}
+      {% include 'components/taglist.njk' %}
+    </aside>
+  </div>
+</div>

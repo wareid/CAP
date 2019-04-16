@@ -1,0 +1,5 @@
+{
+  "tags": "post",
+  "layout": "blog-post.njk",
+  "rootref": "../../.."
+}

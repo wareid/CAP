@@ -1,0 +1,35 @@
+{
+  "name": "canadian-accessible-publishing-website",
+  "version": "1.0.0",
+  "description": "Website project for Canadian Accessible Publishing",
+  "scripts": {
+    "build": "rimraf _site && eleventy",
+    "pretty": "gulp pretty",
+    "serve": "rimraf _site && eleventy --serve"
+  },
+  "tags": [
+    "accessibility",
+    "a11y",
+    "canada",
+    "publishing",
+    "ebook",
+    "epub",
+    "eprdctn"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wareid/CAP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.2",
+    "gulp": "^4.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "luxon": "^1.12.1",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-imsize": "^2.0.1",
+    "nunjucks": "^3.2.0"
+  }
+}
