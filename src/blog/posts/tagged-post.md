@@ -1,6 +1,7 @@
 ---
 title: A post with a tag
 author: marisademeglio
+date: 2019-04-15
 tags:
   - post
   - sampleTag
@@ -18,4 +19,4 @@ tags:
 ---
 ```
 
-And be sure to include the `post` tag as well as any that you would like to use. 
+And be sure to include the `post` tag as well as any that you would like to use.

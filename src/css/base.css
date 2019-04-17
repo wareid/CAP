@@ -10,6 +10,20 @@ a {
   text-decoration: none;
 }
 
+/* asides */
+aside {
+  border: 2px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 4rem;
+	font-size: smaller;
+}
+
+aside ul{
+  list-style-type: circle;
+  padding-left: 0;
+}
+
 /* header and footer */
 .sitenav li{
   display: inline-block;
@@ -32,21 +46,6 @@ a {
   padding-top: 1rem;
   border-top: 2px solid black;
 }
-
-/* asides */
-aside {
-  border: 2px solid black;
-	border-radius: 10px;
-	padding: 20px;
-	margin-bottom: 4rem;
-	font-size: smaller;
-}
-
-aside ul{
-  list-style-type: circle;
-  padding-left: 0;
-}
-
 /* main content */
 .content {
   padding-top: 1rem;

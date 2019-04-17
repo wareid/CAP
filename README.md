@@ -1,9 +1,16 @@
 # CAP
 Canadian Accessible Publishing - Home for all of our work!
 
-## Adding content
+## Getting these files
 
-_TODO: add github workflow instructions._
+Clone this repository locally. Then open a terminal program and go to the directory where you put the files:
+
+`$ cd ~/Downloads/CAP`
+
+Install the required libraries:
+`$ npm install`
+
+## Adding content
 
 Add markdown content to any of these folders:
 
@@ -11,10 +18,28 @@ Add markdown content to any of these folders:
 - `resources`
 - `certification`
 
-## Building the latest
+Follow the examples there.
 
-Build with `$npm run build`
+## Building the site
+
+Build with `$ npm run build`
 
 Commit your build. Github pages will pick up what's in the `docs` folder.
 
-_TODO: Use continuous integration instead to automate builds._
+## More things you can do
+
+* Serve the files locally with `$npm run serve`
+* Lint your CSS with `$gulp lint-css`
+* Pretty-format the HTML output with `$gulp pretty-html`
+
+## TODOs
+
+Related to the site code/tooling:
+* continuous integration setup
+* better 'truncate' function for displaying blog post snippets
+* responsive design for mobile
+
+For the group:
+* Review and refine workflow
+* Write UX wishlist
+* Start creating and editing
