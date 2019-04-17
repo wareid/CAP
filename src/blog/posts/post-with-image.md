@@ -4,6 +4,7 @@ author: marisademeglio
 tags:
   - post
   - sampleTag
+date: 2019-04-16
 ---
 This is a post with an image and a tag.
 

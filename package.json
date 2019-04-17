@@ -4,7 +4,6 @@
   "description": "Website project for Canadian Accessible Publishing",
   "scripts": {
     "build": "rimraf docs && eleventy",
-    "pretty": "gulp pretty",
     "serve": "rimraf docs && eleventy --serve"
   },
   "tags": [
@@ -26,10 +25,13 @@
     "@11ty/eleventy": "^0.8.2",
     "gulp": "^4.0.0",
     "gulp-pretty-html": "^2.0.10",
+    "gulp-stylelint": "^9.0.0",
     "luxon": "^1.12.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-imsize": "^2.0.1",
-    "nunjucks": "^3.2.0"
+    "nunjucks": "^3.2.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-recommended": "^2.2.0"
   }
 }
