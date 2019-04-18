@@ -53,8 +53,8 @@ For the group:
 This is a static site built with [11ty](http://11ty.io). It has been configured with some specific types of content behavior:
 
 - blog 
- - post snippets are aggregated on the front page
- - tags are displayed
+  - post snippets are aggregated on the front page
+  - tags are displayed
 - section
   - good for documentation
   - local toc auto-generated for index page, one level deep
