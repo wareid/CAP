@@ -32,9 +32,9 @@ Commit your build. Github pages will pick up what's in the `docs` folder.
 
 ## More things you can do
 
-* Serve the files locally with `$npm run serve`. Browse to [localhost:8080](http://localhost:8080).
-* Lint your CSS with `$gulp lint-css`
-* Pretty-format the HTML output with `$gulp pretty-html`
+* Serve the files locally with `$ npm run serve`. Browse to [localhost:8080](http://localhost:8080).
+* Lint your CSS with `$ gulp lint-css`
+* Pretty-format the HTML output with `$ gulp pretty-html`
 
 ## TODOs
 
