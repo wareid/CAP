@@ -31,30 +31,43 @@ module.exports = function(eleventyConfig) {
     }
     return array.slice(0, n);
   });
-  nunjucksEnv.addFilter("nextPost", (self, posts) => {
-    let idx = posts.findIndex(p=>p.fileSlug == self.fileSlug);
-    if (idx == posts.length -1) {
+  nunjucksEnv.addFilter("nextItem", (self, array) => {
+    let idx = array.findIndex(p=>p.fileSlug == self.fileSlug);
+    if (idx == array.length -1) {
       return null;
     }
     else {
       idx += 1;
-      return {url: posts[idx].url, title: posts[idx].data.title};
+      return {url: array[idx].url, title: array[idx].data.title};
     }
 
   });
-  nunjucksEnv.addFilter("prevPost", (self, posts) => {
-    let idx = posts.findIndex(p=>p.fileSlug == self.fileSlug);
+  nunjucksEnv.addFilter("prevItem", (self, array) => {
+    let idx = array.findIndex(p=>p.fileSlug == self.fileSlug);
     if (idx == 0) {
       return null;
     }
     else {
       idx -= 1;
-      return {url: posts[idx].url, title: posts[idx].data.title};
+      return {url: array[idx].url, title: array[idx].data.title};
     }
   });
   nunjucksEnv.addFilter("identity", (thing, msg) => {
     console.log(msg, thing);
     return thing;
+  });
+  nunjucksEnv.addFilter("sortByOrder", arr => {
+    return arr.sort(function(a, b) {
+      return b.data.order < a.data.order;
+    });
+  });
+  nunjucksEnv.addFilter("sectionPages", (pages, sectionName) => {
+    return pages.filter(page => page.data.section === sectionName);
+  });
+  nunjucksEnv.addFilter("notIndex", pages => {
+    console.log(pages.map(p=>p.fileSlug).join(","));
+    console.log(pages.map(p=>p.url).join(","));
+    return pages.filter(page => page.url != `/${page.fileSlug}/`);
   });
 
   eleventyConfig.setLibrary("njk", nunjucksEnv);

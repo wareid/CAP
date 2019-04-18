@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{'/css/base.css' | url}}">
+    {% block head %}
+    <title>{{site.title}}{% if title %}: {{ title }}{% endif %}</title>
+    {% endblock %}
+  </head>
+  <body class="wrapper">
+    <header>
+      <h1>{{site.title}}</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="{{'/' | url}}">Home</a></li>
+        <li><a href="{{'/blog' | url}}">Blog</a></li>
+        <li><a href="{{'/certification' | url}}">Certification</a></li>
+        <li><a href="{{'/resources' | url}}">Resources</a></li>
+      </ul>
+    </nav>
+
+    {%block content %}
+
+      {{ content | safe }}
+
+    {% endblock %}
+
+    <footer>
+      <p>Last updated: {{page.date | readableDate}}</p>
+      <p>{{site.copyrightStatement}}</p>
+      <p>{{site.licenseStatement}}</p>
+    </footer>
+  </body>
+</html>
