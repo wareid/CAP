@@ -12,7 +12,7 @@ Install the required libraries:
 
 ## Adding content
 
-Add markdown content to any of these folders:
+Add content (markdown or other formats) to any of these folders:
 
 - `blog/posts`
 - `resources`
