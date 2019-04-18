@@ -1,40 +1,47 @@
-{% extends 'page.njk' %}
+{% extends 'base.njk' %}
 {% block content %}
+<main class="page-in-collection">
+  <div class="content">
+    <h1>{{title}}</h1>
+    <div class="post-meta">
+      <p>by {{authors[author].name}}, {{authors[author].organization}}</p>
+      <p>{{ page.date | readableDate }}</p>
 
-<h1>{{title}}</h1>
-<p>by {{authors[author].name}}, {{authors[author].organization}}</p>
-<p>{{ page.date | readableDate }}</p>
+      {%- set tags = tags | filterTags -%}
+      {%- if tags.length > 0 -%}
+      <p>
+        <span class="label">Tags:</span>
+        {%- for tag in tags -%}
+          {% include 'components/tag.njk'%}
 
-{%- set tags = tags | filterTags -%}
-{%- if tags.length > 0 -%}
-<p>
-  <span style="font-size: smaller; margin-right: 3px;">Tags:</span>
-  {%- for tag in tags -%}
-    {% include 'components/tag.njk'%}
-  {%- endfor -%}
-</p>
-{%- endif -%}
-{{content | safe}}
-<div class="blognav">
-  {%set postlist = collections.post %}
-  {%set nextPost = page | nextPost(postlist) %}
-  {%set prevPost = page | prevPost(postlist) %}
-{%-if prevPost -%}<a href="{{prevPost['url'] | url}}">Previous: {{prevPost['title']}}</a>{%- endif -%}
-{%-if nextPost -%}<a href="{{nextPost['url'] | url}}">Next: {{nextPost['title']}}</a>{%- endif -%}
-</div>
+        {%- endfor -%}
+      </p>
+      {%- endif -%}
+    </div>
 
-<aside class="related-posts">
-  <h2>Related Posts</h2>
-  <ul>
-  {%- for tag in tags -%}
-    {%- set postlist = collections[tag] | filterSelfOut(page) -%}
-    {%- if postlist.length > 0 -%}
-      {%- for post in postlist  -%}
-        <li><a href="{{ post.url | url}}">{{ post.data.title }}</a></li>
+    {{content | safe}}
+
+  </div>
+  <div>
+    {% set pagelist = collections.post %}
+    {% set thispage = page %}
+    {% set indexHref = '../../' %}
+    {%include 'components/collection-nav.njk' %}
+
+    <aside class="related-posts">
+      <h2>Related Posts</h2>
+      <ul>
+      {%- for tag in tags -%}
+        {%- set postlist = collections[tag] | filterSelfOut(page) -%}
+        {%- if postlist.length > 0 -%}
+          {%- for post in postlist  -%}
+            <li><a href="{{ post.url | url}}">{{ post.data.title }}</a></li>
+          {%- endfor -%}
+        {%- endif -%}
       {%- endfor -%}
-    {%- endif -%}
-  {%- endfor -%}
-  </ul>
-</aside>
+      </ul>
+    </aside>
+  </div>
+</main>
 
 {% endblock %}

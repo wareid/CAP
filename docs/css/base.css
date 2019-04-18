@@ -1,13 +1,28 @@
+@media (min-width: 500px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  }
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.5rem;
   font-size: large;
-  width: 90%;
+  width: 95%;
   margin: auto;
   margin-top: 2rem;
+  min-height: 100vh;
 }
 a {
-  text-decoration: none;
+  /* always debatable */
+  /* text-decoration: none; */
 }
 
 /* asides */
@@ -20,60 +35,71 @@ aside {
 }
 
 aside ul{
-  list-style-type: circle;
+  list-style-type: disc;
   padding-left: 0;
 }
-
-/* header and footer */
-.sitenav li{
-  display: inline-block;
-  padding-right: 2rem;
+header {
+  grid-area: header;
 }
-.sitenav ul {
-  padding: 0;
+body>nav {
+  border-bottom: 2px solid gray;
+  grid-area: nav;
 }
-
-.sitenav {
-  border-bottom: 2px solid black;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0;
 }
-.footer {
+footer {
   font-size: smaller;
   font-style: italic;
-  line-height: 1rem;
-}
-.footer:nth-of-type(1) {
-  margin-top: 12rem;
-  padding-top: 1rem;
-  border-top: 2px solid black;
-}
-/* main content */
-.content {
-  padding-top: 1rem;
+  line-height: .5rem;
+  border-top: 2px solid gray;
+  grid-area: footer;
 }
 
-.mainflex {
-  display: flex;
+/* main content */
+main {
+  padding-top: 1rem;
+  grid-area: main;
 }
-.mainflex div:first-child {
-  width: 80%;
+main.page-in-collection {
+  display: grid;
+  grid-template-rows: 2fr .5fr;
+}
+main.blog-index {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 .post-snippet {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid lightgray;
 }
 .post-snippet img {
   width: 80%;
 }
+.post-meta {
+  line-height: .5rem;
+  display: inline-block;
+}
 /* little things */
-.blognav {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.collection-nav {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 2px solid lightgray;
+  line-height: .5rem;
+}
+.collection-nav>p:nth-of-type(1) {
   display: flex;
   justify-content: space-between;
 }
-
+.collection-nav>p:nth-of-type(2) {
+  justify-content: center;
+  display: flex;
+}
 .date {
   font-size: smaller;
   font-style: italic;
@@ -87,4 +113,9 @@ aside ul{
 }
 .tag:last-child:after {
   content: "";
+}
+
+.label {
+  font-size: smaller;
+  margin-right: 3px;
 }
